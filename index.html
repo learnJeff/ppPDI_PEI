@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PDI × PEI Correlation Diagram</title>
+  <script src="https://unpkg.com/cytoscape@3.23.0/dist/cytoscape.min.js"></script>
+  <style>
+    body { margin: 0; }
+    #cy {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid #ccc;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="cy"></div>
+  <script>
+    fetch('PDI_PEI_Correlation.json')
+      .then(res => res.json())
+      .then(data => {
+        cytoscape({
+          container: document.getElementById('cy'),
+          elements: data.elements,
+          style: [
+            
+            {
+              selector: 'node[group = "PDI1"]',
+              style: {
+                'background-color': '#e6194b',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI2"]',
+              style: {
+                'background-color': '#3cb44b',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI3"]',
+              style: {
+                'background-color': '#ffe119',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI4"]',
+              style: {
+                'background-color': '#4363d8',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI5"]',
+              style: {
+                'background-color': '#f58231',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI6"]',
+              style: {
+                'background-color': '#911eb4',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI7"]',
+              style: {
+                'background-color': '#46f0f0',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI8"]',
+              style: {
+                'background-color': '#f032e6',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI9"]',
+              style: {
+                'background-color': '#bcf60c',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI10"]',
+              style: {
+                'background-color': '#fabebe',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI11"]',
+              style: {
+                'background-color': '#008080',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI12"]',
+              style: {
+                'background-color': '#e6beff',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI13"]',
+              style: {
+                'background-color': '#9a6324',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI14"]',
+              style: {
+                'background-color': '#fffac8',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI15"]',
+              style: {
+                'background-color': '#800000',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI16"]',
+              style: {
+                'background-color': '#aaffc3',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI17"]',
+              style: {
+                'background-color': '#808000',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI18"]',
+              style: {
+                'background-color': '#ffd8b1',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI19"]',
+              style: {
+                'background-color': '#000075',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI20"]',
+              style: {
+                'background-color': '#808080',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI21"]',
+              style: {
+                'background-color': '#ffffff',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI22"]',
+              style: {
+                'background-color': '#000000',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI23"]',
+              style: {
+                'background-color': '#caff70',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI24"]',
+              style: {
+                'background-color': '#dda0dd',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI25"]',
+              style: {
+                'background-color': '#00fa9a',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI26"]',
+              style: {
+                'background-color': '#ff69b4',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'node[group = "PDI27"]',
+              style: {
+                'background-color': '#cd853f',
+                'label': 'data(label)',
+                'color': '#000',
+                'text-outline-width': 0,
+                'border-width': 1,
+                'border-color': '#333'
+              }
+            },
+            {
+              selector: 'edge',
+              style: {
+                'width': 2,
+                'line-color': '#999',
+                'target-arrow-shape': 'triangle',
+                'target-arrow-color': '#999',
+                'curve-style': 'bezier'
+              }
+            }
+          ],
+          layout: {
+            name: 'cose',
+            padding: 20
+          }
+        });
+      });
+  </script>
+</body>
+</html>
